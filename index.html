@@ -2,16 +2,135 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>我的个人主页</title>
-    <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f2f5; }
-        .card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页 | 欢迎来到我的世界</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">    
 </head>
 <body>
-    <div class="card">
-        <h1>🎉 我的网站上线了！</h1>
-        <p>这是通过 VS Code 和 GitHub Desktop 发布的。</p>
-    </div>
+
+    <nav>
+        <div class="logo">赵谌碁</div>
+        <ul>
+            <li><a href="#about">关于</a></li>
+            <li><a href="#projects">项目</a></li>
+            <li><a href="resources.html">资源下载</a></li>
+            <li><a href="#contact">联系我</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>你好，我是 赵谌碁</h1>
+        <ul class="hero-intro-list">
+            <li>上海围棋协会教练员, 业余5段</li>
+            <li>欧陆风云4、维多利亚3重度玩家</li>
+            <li>抽象爱好者</li>
+            <li>量化交易及AI爱好者</li>
+            <li>人菜瘾大的爬山及徒步爱好者</li>
+            <li>Alevel 数学及进阶数学老师</li>
+        </ul>        
+        <a href="#projects" class="btn">查看我的工作</a>
+    </header>
+
+    <section id="about" class="container">
+        <h2>关于我</h2>
+        
+        <div class="about-intro">
+            <p>
+                你好！我是一名深耕于国际教育的专业人士。
+                拥有扎实的学术背景与丰富的行业经验，致力于将复杂的数学课程简单化，创造一个草履虫都能听懂的课堂。
+            </p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>🎓 教育背景</h3>
+                <ul>
+                    <li>
+                        <strong>Johns Hopkins University</strong> · 计算机
+                        <span>2022 - 2023</span>
+                    </li>
+                    <li>
+                        <strong>Rutgers University, New Brunswick</strong> · 数学、计算机、统计
+                        <span>2018 - 2021</span>
+                    </li>
+                </ul>
+            </div>
+
+        <div class="about-card">
+            <h3>💼 工作经历</h3>
+            
+            <div class="job-item">
+                <div class="job-header">
+                    <div class="job-title-group">
+                        <strong>新航道上海学校</strong>
+                        <span class="job-position"> · [Alevel 数学老师]</span>
+                    </div>
+                    <span class="job-date">2023.04 - 至今</span>
+                </div>
+                <ul class="job-desc">
+                    <li>负责CIE、EDX课程的教学工作，除M系列外所有数学课程均可教授。累计授课时长2000+小时，0投诉。</li>
+                    <li>学生A，A*率约60%，尤其擅长EDX D1课程教学。</li>
+                    <li>参与新老师的培训与指导工作，负责EDX基础数学、进阶数学模块的批课工作。</li>
+                    <li>独立完成课程笔记整理与更新。累计完成中文笔记6篇，总计300+页。</li>
+                    <li>使用python接入Kimi API辅助出题，涵盖基础题型数十种，并且能一键生成PDF文档。</li>
+                    <li>使用html编写EDX课程真题答案搜索器，可以一键生成作业答案，被同事广泛使用。</li>
+                </ul>
+            </div>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <div class="job-title-group">
+                        <strong>信也科技</strong>
+                        <span class="job-position"> · 高级数据分析师</span>
+                    </div>
+                    <span class="job-date">2023.01 - 2023.03</span>
+                </div>
+                <ul class="job-desc">
+                    <li>参与黑规则、白规则的制定，完成数据分析与报告撰写，为业务决策提供数据支持。</li>
+                    <li>负责日常黑名单表格与贷款APP表格的维护与更新，每周提交有效黑名单约10000条，新的贷款APP约50条。</li>
+                    <li>使用python爬取老赖论坛中帖子，进行舆情分析，为风险控制提供支持。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="about-card">
+                <h3>🏆 资质与技能</h3>
+                <div class="tag-container">
+                    <span class="tag">高中数学教师资格证</span>
+                    <span class="tag">高中信息技术教师资格证</span>
+                    <span class="tag">IB教师资格证(考取中)</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Latex</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>精选项目</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>项目一名称</h3>
+                <p>简要描述这个项目解决了什么问题，使用了哪些技术栈（如 Vue, React, Node.js）。</p>
+            </div>
+            <div class="card">
+                <h3>项目二名称</h3>
+                <p>描述项目的核心功能和你在其中担任的角色。可以附带一个 GitHub 链接。</p>
+            </div>
+            <div class="card">
+                <h3>项目三名称</h3>
+                <p>这里可以展示你的个人爱好项目或是最近在钻研的技术 Demo。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>© 2026 | 人生苦短，我用AI</p>
+        <p style="margin-top: 10px; font-size: 0.9rem; color: #b2bec3;">
+            Email: 2050360276@qq.com
+        </p>
+    </footer>
+
 </body>
 </html>

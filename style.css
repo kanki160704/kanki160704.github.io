@@ -1,0 +1,271 @@
+    /* 全局样式重置 */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Noto+Sans+SC', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9f9f9;
+    }
+
+    /* 导航栏 */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 10%;
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #2d3436;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin-left: 2rem;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #636e72;
+        transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #0984e3;
+    }
+
+    /* Hero 区域 */
+    .hero {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(135deg, #74b9ff 0%, #a29bfe 100%);
+        color: white;
+        padding: 0 20px;
+    }
+
+    .hero-intro-list {
+        display: inline-block; /* 保持块状居中 */
+        text-align: left;      /* 保持内部左对齐 */
+        
+        /* --- 找回圆点的关键设置 --- */
+        list-style: disc;      /* 重新显示实心圆点 (也可以用 circle 或 square) */
+        padding-left: 1.5rem;  /* 必须加上左缩进，否则圆点会跑到容器外面看不见 */
+        /* ------------------------ */
+        
+        margin: 1.5rem 0;
+        font-size: 1.2rem;
+    }
+
+    .hero-intro-list li {
+        margin-bottom: 10px;
+        /* 如果你之前在 HTML 里手动加了 Emoji，圆点会和 Emoji 并存 */
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        background: white;
+        color: #6c5ce7;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: transform 0.3s;
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+.about-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    color: #636e72;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.about-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 5px solid #6c5ce7; /* 添加一条彩色边框更具设计感 */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.about-card h3 {
+    margin-bottom: 1rem;
+    color: #2d3436;
+    font-size: 1.3rem;
+}
+
+.about-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-card li {
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+}
+
+.about-card li strong {
+    display: block;
+    color: #0984e3;
+    font-size: 1.05rem;
+}
+
+.about-card li span {
+    font-size: 0.85rem;
+    color: #b2bec3;
+}
+
+/* 工作经历条目容器 */
+.job-item {
+    margin-bottom: 1.8rem;
+}
+
+/* 头部布局：左右对齐的关键 */
+.job-header {
+    display: flex;
+    justify-content: space-between; /* 标题居左，日期居右 */
+    align-items: baseline;          /* 确保文字底部对齐 */
+    margin-bottom: 0.5rem;
+}
+
+/* 标题组（公司+职位） */
+.job-title-group {
+    flex: 1; /* 占据剩余空间 */
+}
+
+/* 职位名称 */
+.job-position {
+    color: #636e72;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* 时间戳样式 */
+.job-date {
+    font-size: 0.85rem;
+    color: #b2bec3;      /* 浅灰色，作为次要信息 */
+    font-family: 'Arial', sans-serif; /* 数字使用等宽或无衬线字体更整齐 */
+    white-space: nowrap; /* 防止时间换行 */
+    margin-left: 10px;
+}
+
+/* 工作内容列表样式 */
+.job-desc {
+    list-style: disc !important;
+    padding-left: 1.2rem !important;
+    color: #636e72;
+    font-size: 0.9rem;
+}
+
+/* 技能标签样式 */
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background: #f0f2f5;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #636e72;
+    transition: all 0.3s;
+}
+
+.tag:hover {
+    background: #6c5ce7;
+    color: white;
+}
+
+    h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        color: #2d3436;
+    }
+
+    /* 项目展示网格 */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .card {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        transition: transform 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    .card h3 {
+        margin-bottom: 1rem;
+        color: #0984e3;
+    }
+
+    /* 页脚 */
+    footer {
+        text-align: center;
+        padding: 3rem;
+        background: #2d3436;
+        color: white;
+    }
+
+    /* 移动端适配：屏幕太小时时间自动折行 */
+    @media (max-width: 600px) {
+        .job-header {
+            flex-direction: column; /* 手机端改为上下排列 */
+            align-items: flex-start;
+        }
+        .job-date {
+            margin-left: 0;
+            margin-top: 4px;
+        }
+    }
