@@ -23,7 +23,7 @@
         <h1>你好，我是 赵谌碁</h1>
         <ul class="hero-intro-list">
             <li>上海围棋协会教练员, 业余5段</li>
-            <li>欧陆风云4、维多利亚3重度玩家</li>
+            <li>欧陆风云4、维多利亚3、环世界重度玩家</li>
             <li>抽象爱好者</li>
             <li>量化交易及AI爱好者</li>
             <li>人菜瘾大的爬山及徒步爱好者</li>
@@ -35,11 +35,27 @@
     <section id="about" class="container">
         <h2>关于我</h2>
         
-        <div class="about-intro">
-            <p>
-                你好！我是一名深耕于国际教育的专业人士。
-                拥有扎实的学术背景与丰富的行业经验，致力于将复杂的数学课程简单化，创造一个草履虫都能听懂的课堂。
-            </p>
+        <div class="about-container">
+            <div class="about-photos">
+                <figure class="about-figure">
+                    <img src="assets/me.jpg" alt="工作照片1" class="about-img">
+                    <figcaption>这是我</figcaption>
+                </figure>
+                <figure class="about-figure">
+                    <img src="assets/go.png" alt="工作照片2" class="about-img">
+                    <figcaption>让职业八段陷入长考的一手</figcaption>
+                </figure>
+            </div>
+
+        </br>
+        </br>
+            <div class="about-intro">
+                <p>
+                    你好！我是一名深耕于国际教育的专业人士。
+                    拥有扎实的学术背景与丰富的行业经验，致力于将复杂的数学课程简单化，创造一个草履虫都能听懂的课堂。
+                    同时，我也关注教会学生课本上的数学技术是如何变现或者如何在面试中被考察的。我坚信，数学是一门教会学生如何赚钱、实现阶级跨越的学科。
+                </p>
+            </div>
         </div>
 
         <div class="about-grid">
@@ -47,11 +63,11 @@
                 <h3>🎓 教育背景</h3>
                 <ul>
                     <li>
-                        <strong>Johns Hopkins University</strong> · 计算机
+                        <strong>Johns Hopkins University</strong> · 主修计算机
                         <span>2022 - 2023</span>
                     </li>
                     <li>
-                        <strong>Rutgers University, New Brunswick</strong> · 数学、计算机、统计
+                        <strong>Rutgers University, New Brunswick</strong> · 主修数学、计算机、统计
                         <span>2018 - 2021</span>
                     </li>
                 </ul>
@@ -100,6 +116,7 @@
                     <span class="tag">高中数学教师资格证</span>
                     <span class="tag">高中信息技术教师资格证</span>
                     <span class="tag">IB教师资格证(考取中)</span>
+                    <span class="tag">上海围棋协会教练员</span>
                     <span class="tag">Python</span>
                     <span class="tag">Latex</span>
                 </div>
@@ -111,16 +128,41 @@
         <h2>精选项目</h2>
         <div class="grid">
             <div class="card">
-                <h3>项目一名称</h3>
-                <p>简要描述这个项目解决了什么问题，使用了哪些技术栈（如 Vue, React, Node.js）。</p>
+                <h3>AI出题</h3>
+                <ul class="job-desc">
+                    <li>使用Python连接Kimi API，实现自动化出题功能，以及可视化操作页面。</li>
+                    <li>自动将AI生成的题目导出为转换为Latex格式，并且自动生成PDF文档。</li>
+                    <li>涵盖基础数学题型约30种，极大提升学生对于一些基础知识点的掌握情况。</li>
+                </ul>
+                <figure class="about-figure">
+                    <img src="assets/AI_screen.png" alt="工作照片1" class="about-img">
+                    <figcaption>自动生成的PDF中部分内容</figcaption>
+                </figure>    
+            </div>
+
+            <div class="card">
+                <h3>答案搜索器</h3>
+                <ul class="job-desc">
+                    <li>使用Python对于EDX数学的Mark Scheme进行识别，并且根据其Mark Scheme的特征进行拆分，获得每一题的答案，准确率约95%</li>
+                    <li>使用Html、JavaScript等前端技术，完成答案的搜索功能及其前端页面，用户只需要输入年份、科目、题号等信息即可获取答案</li>
+                    <li>自动识别作业的Latex格式，能够一键生成作业答案</li>
+                </ul>
+                <figure class="about-figure">
+                    <img src="assets/search.png" alt="工作照片1" class="about-img">
+                    <figcaption>前端页面功能展示</figcaption>
+                </figure>                  
             </div>
             <div class="card">
-                <h3>项目二名称</h3>
-                <p>描述项目的核心功能和你在其中担任的角色。可以附带一个 GitHub 链接。</p>
-            </div>
-            <div class="card">
-                <h3>项目三名称</h3>
-                <p>这里可以展示你的个人爱好项目或是最近在钻研的技术 Demo。</p>
+                <h3>分数线可视化</h3>
+                <ul class="job-desc">
+                    <li>对近年来的CIE、EDX分数线进行汇总，整理成csv表格</li>
+                    <li>使用Html、JavaScript技术进行前端页面的构建，完成近年来分数线的可视化</li>
+                    <li>减少了重复劳动的时间、提升了工作效率</li>                   
+                </ul>
+                <figure class="about-figure">
+                    <img src="assets/boundary.png" alt="工作照片1" class="about-img">
+                    <figcaption>前端页面功能展示</figcaption>
+                </figure>  
             </div>
         </div>
     </section>

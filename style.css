@@ -107,6 +107,46 @@
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
+.about-photos {
+    display: flex; /* 开启 Flexbox 布局 */
+    flex-direction: row; /* 强制照片横向排列 */
+    gap: 20px; /* 两张照片之间的间距 */
+    width: 100%;
+    justify-content: center; /* 照片居中显示 */
+}
+
+/* 电脑端（屏幕宽度大于 768px）让照片区域更丰满 */
+@media (min-width: 768px) {
+    .about-photos {
+        width: auto;
+    }
+}
+
+/* 单个照片及介绍容器 */
+.about-figure {
+    flex: 1; /* 两张照片平分容器宽度 */
+    margin: 0;
+    max-width: 300px; /* 限制照片最大宽度，防止变得太大 */
+}
+
+/* 照片样式 */
+.about-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    object-fit: cover; /* 图片填充方式：覆盖，裁切掉多余部分 */
+}
+
+/* 图片下方的介绍文字 */
+figcaption {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}
+
 .about-intro {
     text-align: center;
     max-width: 800px;
