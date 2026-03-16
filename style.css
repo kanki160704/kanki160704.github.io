@@ -115,13 +115,6 @@
     justify-content: center; /* 照片居中显示 */
 }
 
-/* 电脑端（屏幕宽度大于 768px）让照片区域更丰满 */
-@media (min-width: 768px) {
-    .about-photos {
-        width: auto;
-    }
-}
-
 /* 单个照片及介绍容器 */
 .about-figure {
     flex: 1; /* 两张照片平分容器宽度 */
