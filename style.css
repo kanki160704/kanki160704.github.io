@@ -292,17 +292,19 @@ figcaption {
     }
 
         /* 默认隐藏英文内容 */
+    /* 1. 核心：默认把所有英文内容藏起来 */
     .lang-en {
-        display: none;
+        display: none !important;
     }
 
-    /* 当 body 带有 .en 状态时，反转显示逻辑 */
-    body.en-active .lang-zh {
-        display: none;
-    }
-
+    /* 2. 当 body 被 JS 加上 .en-active 类时，显示英文 */
     body.en-active .lang-en {
-        display: block; /* 或者 inline/flex，取决于原标签属性 */
+        display: block !important; /* 如果是行内文字，可以用 inline */
+    }
+
+    /* 3. 当 body 被 JS 加上 .en-active 类时，隐藏中文 */
+    body.en-active .lang-zh {
+        display: none !important;
     }
 
     /* 移动端适配：屏幕太小时时间自动折行 */
