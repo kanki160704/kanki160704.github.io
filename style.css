@@ -291,6 +291,20 @@ figcaption {
         color: white;
     }
 
+        /* 默认隐藏英文内容 */
+    .lang-en {
+        display: none;
+    }
+
+    /* 当 body 带有 .en 状态时，反转显示逻辑 */
+    body.en-active .lang-zh {
+        display: none;
+    }
+
+    body.en-active .lang-en {
+        display: block; /* 或者 inline/flex，取决于原标签属性 */
+    }
+
     /* 移动端适配：屏幕太小时时间自动折行 */
     @media (max-width: 600px) {
         .job-header {

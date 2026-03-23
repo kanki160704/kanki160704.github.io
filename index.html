@@ -7,105 +7,236 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">    
 </head>
+
+<script>
+    function toggleLanguage() {
+        const body = document.body;
+        const btn = document.getElementById('langBtn');
+        
+        // 切换 body 的 class
+        body.classList.toggle('en-active');
+        
+        // 更新按钮文字
+        if (body.classList.contains('en-active')) {
+            btn.innerText = '中';
+            localStorage.setItem('pref-lang', 'en');
+        } else {
+            btn.innerText = 'EN';
+            localStorage.setItem('pref-lang', 'zh');
+        }
+    }
+
+    // 页面加载时检查用户之前的偏好
+    window.onload = () => {
+        if (localStorage.getItem('pref-lang') === 'en') {
+            toggleLanguage();
+        }
+    };
+</script>
+
 <body>
 
     <nav>
-        <div class="logo">赵谌碁</div>
+        <div class="logo">
+            <div class="lang-zh">赵谌碁</div>
+            <div class="lang-en">Chenqi Zhao</div>
+        </div>
         <ul>
-            <li><a href="#about">关于</a></li>
-            <li><a href="#projects">项目</a></li>
-            <li><a href="resources.html">资源下载</a></li>
-            <li><a href="#contact">联系我</a></li>
+            <li>
+                <a href="#about">
+                    <div class="lang-zh">关于</div>
+                    <div class="lang-en">About</div>
+                </a>
+            </li>
+            <li>
+                <a href="#projects">
+                    <div class="lang-zh">项目</div>
+                    <div class="lang-en">Projects</div>
+                </a>
+            </li>            
+            <li><a href="resources.html">
+                <div class="lang-zh">资源下载</div>
+                <div class="lang-en">Resources</div>
+            </a></li>
+            <li><a href="#contact">
+                <div class="lang-zh">联系我</div>
+                <div class="lang-en">Contact Me</div>
+            </a></li>
         </ul>
+        <li><a href="javascript:void(0)" onclick="toggleLanguage()" id="langBtn">EN</a></li>
     </nav>
 
     <header class="hero">
-        <h1>你好，我是 赵谌碁</h1>
+        <h1>
+            <div class="lang-zh">你好，我是 赵谌碁</div>
+            <div class="lang-en">Hello, I'm Chenqi Zhao</div>
+        </h1>
         <ul class="hero-intro-list">
-            <li>上海围棋协会教练员, 业余5段</li>
-            <li>欧陆风云4、维多利亚3、环世界重度玩家</li>
-            <li>抽象爱好者</li>
-            <li>量化交易及AI爱好者</li>
-            <li>人菜瘾大的爬山及徒步爱好者</li>
-            <li>Alevel 数学及进阶数学老师</li>
+            <li>
+                <div class="lang-zh">上海围棋协会教练员, 业余5段</div>
+                <div class="lang-en">Shanghai Go Association Coach, Amateur 5 Dan</div>
+            </li>
+            <li>
+                <div class="lang-zh">欧陆风云4、维多利亚3、环世界重度玩家</div>
+                <div class="lang-en">Heavy player of Europa Universalis 4, Victoria 3, and RimWorld</div>
+            </li>
+            <li>
+                <div class="lang-zh">抽象爱好者</div>
+                <div class="lang-en">Abstract Art Enthusiast</div>
+            </li>
+            <li>
+                <div class="lang-zh">量化交易及AI爱好者</div>
+                <div class="lang-en">Quantitative Trading and AI Enthusiast</div>
+            </li>
+            <li>
+                <div class="lang-zh">人菜瘾大的爬山及徒步爱好者</div>
+                <div class="lang-en">Mountain Climbing and Hiking Enthusiast with a Strong Passion for the Sport</div>
+            </li>
+            <li>
+                <div class="lang-zh">Alevel 数学及进阶数学老师</div>
+                <div class="lang-en">Alevel Mathematics and Further Mathematics Teacher</div>
+            </li>
         </ul>        
-        <a href="#projects" class="btn">查看我的工作</a>
+        <a href="#projects" class="btn">
+            <div class="lang-zh">查看我的工作</div>
+            <div class="lang-en">View My Work</div>
+        </a>
     </header>
 
     <section id="about" class="container">
-        <h2>关于我</h2>
-        
+        <h2>
+            <div class="lang-zh">关于我</div>
+            <div class="lang-en">About Me</div>
+        </h2>
+
         <div class="about-container">
             <div class="about-photos">
                 <figure class="about-figure">
                     <img src="assets/me.jpg" alt="工作照片1" class="about-img">
-                    <figcaption>这是我</figcaption>
+                    <figcaption>
+                        <div class="lang-zh">这是我</div>
+                        <div class="lang-en">This is me</div>
+                    </figcaption>
                 </figure>
                 <figure class="about-figure">
                     <img src="assets/go.png" alt="工作照片2" class="about-img">
-                    <figcaption>让职业八段陷入长考的一手</figcaption>
+                    <figcaption>
+                        <div class="lang-zh">让职业八段陷入长考的一手</div>
+                        <div class="lang-en">A move that puts professional 8-dan players in deep thought</div>
+                    </figcaption>
                 </figure>
             </div>
 
         </br>
         </br>
             <div class="about-intro">
-                <p>
+                <p class="lang-zh">
                     你好！我是一名深耕于国际教育的专业人士。
                     拥有扎实的学术背景与丰富的行业经验，致力于将复杂的数学课程简单化，创造一个草履虫都能听懂的课堂。
                     同时，我也关注教会学生课本上的数学技术是如何变现或者如何在面试中被考察的。我坚信，数学是一门教会学生如何赚钱、实现阶级跨越的学科。
+                </p>
+                <p class="lang-en">
+                    Hello! I am a professional Math teacherdeeply engaged in international education.
+                    With a solid academic background and rich industry experience, I am committed to simplifying complex mathematics courses and creating a classroom that even a paramecium can understand.
+                    At the same time, I also focus on teaching students how the mathematical techniques in textbooks are monetized or assessed in interviews. I firmly believe that mathematics is a discipline that teaches students how to make money and achieve social mobility.
                 </p>
             </div>
         </div>
 
         <div class="about-grid">
             <div class="about-card">
-                <h3>🎓 教育背景</h3>
+                <h3>
+                    <div class="lang-zh">🎓 教育背景</div>
+                    <div class="lang-en">Education Background</div>
+                </h3>
                 <ul>
                     <li>
-                        <strong>Johns Hopkins University</strong> · 主修计算机
+                        <strong>Johns Hopkins University</strong> 
+                        <div class="lang-zh">· 主修计算机</div>
+                        <div class="lang-en">· Major in Computer Science</div>
                         <span>2022 - 2023</span>
                     </li>
                     <li>
-                        <strong>Rutgers University, New Brunswick</strong> · 主修数学、计算机、统计
+                        <strong>Rutgers University, New Brunswick</strong> 
+                        <div class="lang-zh">· 主修数学、计算机、统计</div>
+                        <div class="lang-en">· Major in Mathematics, Computer Science, and Statistics</div>
                         <span>2018 - 2021</span>
                     </li>
                 </ul>
             </div>
 
         <div class="about-card">
-            <h3>💼 工作经历</h3>
-            
+            <h3>
+                <div class="lang-zh">💼 工作经历</div>
+                <div class="lang-en">Work Experience</div>
+            </h3>
+
             <div class="job-item">
                 <div class="job-header">
                     <div class="job-title-group">
-                        <strong>新航道上海学校</strong>
-                        <span class="job-position"> · [Alevel 数学老师]</span>
+                        <strong>
+                            <div class="lang-zh">新航道上海学校</div>
+                            <div class="lang-en">New Channel Shanghai School</div>
+                        </strong>
+                        <span class="job-position"> 
+                            <div class="lang-zh">· Alevel 数学老师</div>
+                            <div class="lang-en">· Alevel Math Teacher</div>
+                        </span>
                     </div>
                     <span class="job-date">2023.04 - 至今</span>
                 </div>
                 <ul class="job-desc">
-                    <li>负责CIE、EDX课程的教学工作，除M系列外所有数学课程均可教授。累计授课时长2000+小时，0投诉。</li>
-                    <li>学生A，A*率约60%，尤其擅长EDX D1课程教学。</li>
-                    <li>参与新老师的培训与指导工作，负责EDX基础数学、进阶数学模块的批课工作。</li>
-                    <li>独立完成课程笔记整理与更新。累计完成中文笔记6篇，总计300+页。</li>
-                    <li>使用python接入Kimi API辅助出题，涵盖基础题型数十种，并且能一键生成PDF文档。</li>
-                    <li>使用html编写EDX课程真题答案搜索器，可以一键生成作业答案，被同事广泛使用。</li>
+                    <li>
+                        <div class="lang-zh">负责CIE、EDX课程的教学工作，除M系列外所有数学课程均可教授。累计授课时长2000+小时，0投诉。</div>
+                        <div class="lang-en">Responsible for teaching CIE and EDX courses, able to teach all math courses except the M series. Accumulated teaching hours exceed 2000, with 0 complaints.</div>
+                    </li>
+                    <li>
+                        <div class="lang-zh">学生A，A*率约75%，尤其擅长EDX D1课程教学。</div>
+                        <div class="lang-en">Student A has an A* rate of approximately 75%, especially skilled in teaching EDX D1 courses.</div>
+                    </li>
+                    <li>
+                        <div class="lang-zh">参与新老师的培训与指导工作，负责EDX基础数学、进阶数学模块的批课工作。</div>
+                        <div class="lang-en">Participated in the training and mentoring of new teachers, responsible for training EDX basic math and advanced math modules.</div>
+                    </li>
+                    <li>
+                        <div class="lang-zh">独立完成课程笔记整理与更新。累计完成中文笔记6篇，总计300+页。</div>
+                        <div class="lang-en">Independently completed the organization and updating of course notes. Accumulated 6 Chinese notes, totaling over 300 pages.</div>
+                    </li>
+                    <li>
+                        <div class="lang-zh">使用python接入Kimi API辅助出题，涵盖基础题型数十种，并且能一键生成PDF文档。</div>
+                        <div class="lang-en">Used Python to connect to the Kimi API for question generation, covering dozens of basic question types, and can generate PDF documents with one click.</div>
+
+                    </li>
                 </ul>
             </div>
 
             <div class="job-item">
                 <div class="job-header">
                     <div class="job-title-group">
-                        <strong>信也科技</strong>
-                        <span class="job-position"> · 高级数据分析师</span>
+                        <strong>
+                            <div class="lang-zh">信也科技</div>
+                            <div class="lang-en">Xinye Technology</div>
+                        </strong>
+                        <span class="job-position"> 
+                            <div class="lang-zh">· 高级数据分析师 </div>
+                            <div class="lang-en">· Senior Data Analyst </div>
+                        </span>
                     </div>
                     <span class="job-date">2023.01 - 2023.03</span>
                 </div>
                 <ul class="job-desc">
-                    <li>参与黑规则、白规则的制定，完成数据分析与报告撰写，为业务决策提供数据支持。</li>
-                    <li>负责日常黑名单表格与贷款APP表格的维护与更新，每周提交有效黑名单约10000条，新的贷款APP约50条。</li>
-                    <li>使用python爬取老赖论坛中帖子，进行舆情分析，为风险控制提供支持。</li>
+                    <li>
+                        <div class="lang-zh">参与黑规则、白规则的制定，完成数据分析与报告撰写，为业务决策提供数据支持。</div>
+                        <div class="lang-en">Participated in the formulation of black and white rules. Completed data analysis and report writing. Provided data support for business decisions.</div>
+                    </li>
+                    <li>
+                        <div class="lang-zh">负责日常黑名单表格与贷款APP表格的维护与更新，每周提交有效黑名单约10000条，新的贷款APP约50条。</div>
+                        <div class="lang-en">Responsible for the maintenance and updating of daily blacklist tables and loan APP tables, crawling about 10,000 effective blacklists weekly and around 50 new loan APPs.</div>
+                    </li>
+                    <li>
+                        <div class="lang-zh">使用python爬取老赖论坛中帖子，进行舆情分析，为风险控制提供支持。</div>
+                        <div class="lang-en">Used Python to crawl posts from the old debtor forum for public opinion analysis, providing support for risk control.</div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -113,62 +244,130 @@
         <div class="about-card">
                 <h3>🏆 资质与技能</h3>
                 <div class="tag-container">
-                    <span class="tag">高中数学教师资格证</span>
-                    <span class="tag">高中信息技术教师资格证</span>
-                    <span class="tag">IB教师资格证(考取中)</span>
-                    <span class="tag">上海围棋协会教练员</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">Latex</span>
+                    <span class="tag">
+                        <div class="lang-zh">高中数学教师资格证</div>
+                        <div class="lang-en">High School Math Teacher Certification</div>
+                    </span>
+                    <span class="tag">
+                        <div class="lang-zh">高中信息技术教师资格证</div>
+                        <div class="lang-en">High School Information Technology Teacher Certification</div>
+                    </span>
+                    <span class="tag">
+                        <div class="lang-zh">IB教师资格证(考取中)</div>
+                        <div class="lang-en">IB Teacher Certification (In Progress)</div>
+                    </span>
+                    <span class="tag">
+                        <div class="lang-zh">上海围棋协会教练员</div>
+                        <div class="lang-en">Shanghai Go Association Coach</div>
+                    </span>
+                    <span class="tag">
+                        <div class="lang-zh">Python</div>
+                        <div class="lang-en">Python</div>
+                    </span>
+                    <span class="tag">
+                        <div class="lang-zh">Latex</div>
+                        <div class="lang-en">Latex</div>
+                    </span>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="projects" class="container">
-        <h2>精选项目</h2>
+        <h2>
+            <div class="lang-zh">精选项目</div>
+            <div class="lang-en">Featured Projects</div>
+        </h2>
         <div class="grid">
             <div class="card">
-                <h3>AI出题</h3>
+                <h3>
+                    <div class="lang-zh">AI出题</div>
+                    <div class="lang-en">AI Question Generation</div>
+                </h3>
                 <ul class="job-desc">
-                    <li>使用Python连接Kimi API，实现自动化出题功能，以及可视化操作页面。</li>
-                    <li>自动将AI生成的题目导出为转换为Latex格式，并且自动生成PDF文档。</li>
-                    <li>涵盖基础数学题型约30种，极大提升学生对于一些基础知识点的掌握情况。</li>
+                    <li>
+                        <div class="lang-zh"></div>使用Python连接Kimi API，实现自动化出题功能，以及可视化操作页面。</div>
+                        <div class="lang-en">Used Python to connect to the Kimi API, implementing automated question generation functionality and a visual operation interface.</div>
+                    </li>
+                    <li>
+                        <div class="lang-zh">自动将AI生成的题目导出为转换为Latex格式，并且自动生成PDF文档。</div>
+                        <div class="lang-en">Automatically exported AI-generated questions in LaTeX format and generated PDF documents.</div>
+                    </li>
+                    <li>
+                        <div class="lang-zh">涵盖基础数学题型约30种，极大提升学生对于一些基础知识点的掌握情况。</div>
+                        <div class="lang-en">Covered about 30 types of basic math problems, significantly improving students' mastery of fundamental concepts.</div>
+                    </li>
                 </ul>
                 <figure class="about-figure">
                     <img src="assets/AI_screen.png" alt="工作照片1" class="about-img">
-                    <figcaption>自动生成的PDF中部分内容</figcaption>
+                    <figcaption>
+                        <div class="lang-zh">自动生成的PDF中部分内容</div>
+                        <div class="lang-en">Part of the automatically generated PDF</div>
+                    </figcaption>
                 </figure>    
             </div>
 
             <div class="card">
-                <h3>答案搜索器</h3>
+                <h3>
+                    <div class="lang-zh">答案搜索器</div>
+                    <div class="lang-en">Answer Searcher</div>
+                </h3>
                 <ul class="job-desc">
-                    <li>使用Python对于EDX数学的Mark Scheme进行识别，并且根据其Mark Scheme的特征进行拆分，获得每一题的答案，准确率约95%</li>
-                    <li>使用Html、JavaScript等前端技术，完成答案的搜索功能及其前端页面，用户只需要输入年份、科目、题号等信息即可获取答案</li>
-                    <li>自动识别作业的Latex格式，能够一键生成作业答案</li>
+                    <li>
+                        <div class="lang-zh">使用Python对于EDX数学的Mark Scheme进行识别，并且根据其Mark Scheme的特征进行拆分，获得每一题的答案，准确率约95%</div>
+                        <div class="lang-en">Used Python to identify the Mark Scheme for EDX math problems and split them based on their characteristics, obtaining answers for each question with an accuracy of about 95%.</div>
+                    </li>
+                    <li>
+                        <div class="lang-zh">使用Html、JavaScript等前端技术，完成答案的搜索功能及其前端页面，用户只需要输入年份、科目、题号等信息即可获取答案</div>
+                        <div class="lang-en">Used HTML, JavaScript, and other frontend technologies to implement the answer search functionality and its frontend interface. Users only need to input the year, subject, and question number to retrieve the answers.</div>
+                    </li>
+                    <li>
+                        <div class="lang-zh">自动识别作业的Latex格式，能够一键生成作业答案</div>
+                        <div class="lang-en">Automatically identified the LaTeX format of assignments and could generate assignment answers with a single click.</div>
+                    </li>
                 </ul>
                 <figure class="about-figure">
                     <img src="assets/search.png" alt="工作照片1" class="about-img">
-                    <figcaption>前端页面功能展示</figcaption>
+                    <figcaption>
+                        <div class="lang-zh">前端页面功能展示</div>
+                        <div class="lang-en">Frontend Page Functionality Showcase</div>
+                    </figcaption>
                 </figure>                  
             </div>
+
             <div class="card">
-                <h3>分数线可视化</h3>
+                <h3>
+                    <div class="lang-zh">分数线可视化</div>
+                    <div class="lang-en">Grade Boundary Visualization</div>
+                </h3>
                 <ul class="job-desc">
-                    <li>对近年来的CIE、EDX分数线进行汇总，整理成csv表格</li>
-                    <li>使用Html、JavaScript技术进行前端页面的构建，完成近年来分数线的可视化</li>
-                    <li>减少了重复劳动的时间、提升了工作效率</li>                   
+                    <li>
+                        <div class="lang-zh">对近年来的CIE、EDX分数线进行汇总，整理成csv表格</div>
+                        <div class="lang-en">Summarized the recent CIE and EDX grade boundaries and organized them into CSV tables.</div>
+                    </li>
+                    <li>
+                        <div class="lang-zh">使用Html、JavaScript技术进行前端页面的构建，完成近年来分数线的可视化</div>
+                        <div class="lang-en">Used HTML and JavaScript technologies to build the frontend page and visualize the recent grade boundaries.</div>
+                    </li>
+                    <li>
+                        <div class="lang-zh">减少了重复劳动的时间、提升了工作效率</div>
+                        <div class="lang-en">Reduced the time spent on repetitive tasks and improved work efficiency.</div>
+                    </li>
                 </ul>
                 <figure class="about-figure">
                     <img src="assets/boundary.png" alt="工作照片1" class="about-img">
-                    <figcaption>前端页面功能展示</figcaption>
+                    <figcaption>
+                        <div class="lang-zh">前端页面功能展示</div>
+                        <div class="lang-en">Frontend Page Functionality Showcase</div>
+                    </figcaption>
                 </figure>  
             </div>
         </div>
     </section>
 
     <footer id="contact">
-        <p>© 2026 | 人生苦短，我用AI</p>
+        <p class="lang-zh">© 2026 | 人生苦短，我用AI</p>
+        <p class="lang-en">© 2026 | Life is short, so I use AI.</p>
         <p style="margin-top: 10px; font-size: 0.9rem; color: #b2bec3;">
             Email: 2050360276@qq.com
         </p>
