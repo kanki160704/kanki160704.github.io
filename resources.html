@@ -8,18 +8,71 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<script>
+    function toggleLanguage() {
+        const body = document.body;
+        const btn = document.getElementById('langBtn');
+        
+        // 切换 body 的 class
+        body.classList.toggle('en-active');
+        
+        // 更新按钮文字
+        if (body.classList.contains('en-active')) {
+            btn.innerText = '中';
+            localStorage.setItem('pref-lang', 'en');
+        } else {
+            btn.innerText = 'EN';
+            localStorage.setItem('pref-lang', 'zh');
+        }
+    }
+
+    // 页面加载时检查用户之前的偏好
+    window.onload = () => {
+        if (localStorage.getItem('pref-lang') === 'en') {
+            toggleLanguage();
+        }
+    };
+</script>
 
     <nav>
-        <div class="logo">赵谌碁</div>
+        <div class="logo">
+            <div class="lang-zh">赵谌碁</div>
+            <div class="lang-en">Chenqi Zhao</div>
+        </div>
         <ul>
-            <li><a href="index.html">返回首页</a></li>
-            <li><a href="index.html#about">关于</a></li>
-            <li><a href="index.html#projects">项目</a></li>
+            <li>
+                <a href="#about">
+                    <div class="lang-zh">关于</div>
+                    <div class="lang-en">About</div>
+                </a>
+            </li>
+            <li>
+                <a href="#projects">
+                    <div class="lang-zh">项目</div>
+                    <div class="lang-en">Projects</div>
+                </a>
+            </li>            
+            <li><a href="resources.html">
+                <div class="lang-zh">资源下载</div>
+                <div class="lang-en">Resources</div>
+            </a></li>
+            <li><a href="#contact">
+                <div class="lang-zh">联系我</div>
+                <div class="lang-en">Contact Me</div>
+            </a></li>
         </ul>
+        <li><a href="javascript:void(0)" onclick="toggleLanguage()" id="langBtn">EN</a></li>
     </nav>
 
-    <header class="hero" style="height: 40vh;"> <h1>资源中心</h1>
-        <p>这里分享我的教学资料、个人简历及相关文档</p>
+    <header class="hero" style="height: 40vh;"> 
+        <h1>
+            <div class="lang-zh">资源中心</div>
+            <div class="lang-en">Resource Center</div>
+        </h1>
+        <p>
+            <div class="lang-zh">这里分享我的教学资料、个人简历及相关文档</div>
+            <div class="lang-en">Here I share my teaching materials, resume, and related documents</div>
+        </p>
     </header>
 
     <main class="container">
@@ -29,52 +82,96 @@
                 <div class="file-info">
                     <h3>
                         <div class="lang-zh">个人简历 (PDF) | 暂未添加</div>
+                        <div class="lang-en">Resume (PDF) | Not added yet</div>
                     </h3>
-                    <p>包含教学经历与学术背景 | 2026版</p>
+                    <p>
+                        <div class="lang-zh">包含教学经历与学术背景 | 2026版</div>
+                        <div class="lang-en">Includes teaching experience and academic background | 2026 version</div>
+                    </p>
                 </div>
-                <a href="assets/resume.pdf" download class="download-link">点击下载</a>
+                <a href="assets/resume.pdf" download class="download-link">
+                    <div class="lang-zh">点击下载</div>
+                    <div class="lang-en">Click to Download</div>
+                </a>
             </div>
 
             <div class="resource-card">
                 <div class="file-icon">📊</div>
                 <div class="file-info">
-                    <h3>EDX FP1复习笔记</h3>
-                    <p>涵盖 Futher Mathematics 核心考点</p>
+                    <h3>
+                        <div class="lang-zh">EDX FP1复习笔记</div>
+                        <div class="lang-en">EDX FP1 Review Notes</div>
+                    </h3>
+                    <p>
+                        <div class="lang-zh">涵盖 Futher Mathematics 核心考点</div>
+                        <div class="lang-en">Covers Core Topics in Further Mathematics</div>
+                    </p>
                 </div>
-                <a href="assets/EDX_FP1.pdf" download class="download-link">点击下载</a>
+                <a href="assets/EDX_FP1.pdf" download class="download-link">
+                    <div class="lang-zh">点击下载</div>
+                    <div class="lang-en">Click to Download</div>
+                </a>
             </div>
 
             <div class="resource-card">
                 <div class="file-icon">📊</div>
                 <div class="file-info">
-                    <h3>EDX P3复习笔记</h3>
-                    <p>涵盖 Pure Mathematics 核心考点</p>
+                    <h3>
+                        <div class="lang-zh">EDX P3复习笔记</div>
+                        <div class="lang-en">EDX P3 Review Notes</div>
+                    </h3>
+                    <p>
+                        <div class="lang-zh">涵盖 Pure Mathematics 核心考点</div>
+                        <div class="lang-en">Covers Core Topics in Pure Mathematics</div>
+                    </p>
                 </div>
-                <a href="assets/EDX_P3.pdf" download class="download-link">点击下载</a>
+                <a href="assets/EDX_P3.pdf" download class="download-link">
+                    <div class="lang-zh">点击下载</div>
+                    <div class="lang-en">Click to Download</div>
+                </a>
             </div>
 
             <div class="resource-card">
                 <div class="file-icon">📊</div>
                 <div class="file-info">
-                    <h3>EDX P4复习笔记</h3>
-                    <p>涵盖 Pure Mathematics 核心考点</p>
+                    <h3>
+                        <div class="lang-zh">EDX P4复习笔记</div>
+                        <div class="lang-en">EDX P4 Review Notes</div>
+                    </h3>
+                    <p>
+                        <div class="lang-zh">涵盖 Pure Mathematics 核心考点</div>
+                        <div class="lang-en">Covers Core Topics in Pure Mathematics</div>
+                    </p>
                 </div>
-                <a href="assets/EDX_P4.pdf" download class="download-link">点击下载</a>
+                <a href="assets/EDX_P4.pdf" download class="download-link">
+                    <div class="lang-zh">点击下载</div>
+                    <div class="lang-en">Click to Download</div>
+                </a>
             </div>
 
             <div class="resource-card">
                 <div class="file-icon">📊</div>
                 <div class="file-info">
-                    <h3>EDX D1分类真题</h3>
-                    <p>涵盖 D1 核心考点</p>
+                    <h3>
+                        <div class="lang-zh">EDX D1分类真题</div>
+                        <div class="lang-en">EDX D1 Classified Practice Questions</div>
+                    </h3>
+                    <p>
+                        <div class="lang-zh">涵盖 D1 核心考点</div>
+                        <div class="lang-en">Covers Core Topics in D1</div>
+                    </p>
                 </div>
-                <a href="assets/questions.pdf" download class="download-link">点击下载</a>
+                <a href="assets/questions.pdf" download class="download-link">
+                    <div class="lang-zh">点击下载</div>
+                    <div class="lang-en">Click to Download</div>
+                </a>
             </div>
         </div>
     </main>
 
     <footer id="contact">
-        <p>© 2026 | 人生苦短，我用AI</p>
+        <p class="lang-zh">© 2026 | 人生苦短，我用AI</p>
+        <p class="lang-en">© 2026 | Life is short, so I use AI.</p>
         <p style="margin-top: 10px; font-size: 0.9rem; color: #b2bec3;">
             Email: 2050360276@qq.com
         </p>
